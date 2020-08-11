@@ -1,0 +1,35 @@
+{
+  "name": "orders-simulation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "NODE_PATH=$NODE_PATH:./ main.js",
+  "scripts": {
+    "start": "NODE_PATH=$NODE_PATH:./ node main",
+    "repl": "NODE_PATH=$NODE_PATH:./ node --experimental-repl-await repl",
+    "test": "npm --silent run nyc",
+    "nyc": "nyc npm --silent run mocha",
+    "mocha": "NODE_PATH=$NODE_PATH:./ NODE_ENV=test mocha --exit --reporter list",
+    "eslint": "eslint --ignore-path .gitignore --report-unused-disable-directives '**/*.js'"
+  },
+  "author": "brandon.zacharie@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-datetime": "^1.7.0",
+    "eslint": "^7.5.0",
+    "ignore": "^5.1.8",
+    "mocha": "^8.1.1",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.0.0",
+    "dotenv": "^8.2.0",
+    "moment": "^2.27.0",
+    "moment-duration-format": "^2.3.2",
+    "p-throttle": "^3.1.0",
+    "pretty-error": "^2.1.1",
+    "uuid": "^8.3.0",
+    "winston": "^3.3.3"
+  }
+}
